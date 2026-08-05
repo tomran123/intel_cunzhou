@@ -5,15 +5,12 @@
 | **Intern** | Cunzhou Ran |
 | **Department** | Intel China, SCP / CPEG (Software team) |
 | **Internship period** | 05/18/2026 – 08/07/2026 |
-| **Manager / Supervisor** | Fane Li |
 
-This repository is my internship portfolio: AI model optimization and runtime deployment with **OpenVINO™** across Intel CPU / iGPU / NPU platforms. It contains the FLUX.2-klein Panther Lake bring-up work directly (scripts, benchmark reports, BKM document — model weights and OpenVINO compile caches are intentionally excluded, see below), and links out to my other project repositories.
+This repository is an internship portfolio: AI model optimization and runtime deployment with **OpenVINO™** across Intel CPU / iGPU / NPU platforms. It contains the FLUX.2-klein Panther Lake bring-up work directly (scripts, benchmark reports, BKM document — model weights and OpenVINO compile caches are intentionally excluded, see below), and links out to the other project repositories.
 
 ## Overview
 
-During my internship I focused on AI model optimization and runtime deployment using OpenVINO™ across Intel platforms. Key highlights include engineering the **Real-ESRGAN super-resolution pipeline** and delivering comprehensive evaluation reports, bringing up **FLUX.2-klein** on **Panther Lake** with BKMs, achieving a **2.8x speedup and 27% memory reduction** for **PaddleOCR-VL 1.5** via NNCF INT8 quantization, and building an end-to-end **SAM3 + LaMa** object-removal pipeline with a Gradio demo. Alongside these four formally reviewed deliverables, I also rebuilt the **PP-OCRv6 medium OCR pipeline** with a GPU/NPU/CPU heterogeneous deployment and its own OpenVINO BKM.
-
-The team's culture of technical rigor, open collaboration, and strong mentorship gave me hands-on mastery of **GenAI runtime engineering**, **model quantization**, and **performance profiling** on Intel silicon — a solid foundation for a career in AI systems software.
+This internship focused on AI model optimization and runtime deployment using OpenVINO™ across Intel platforms. Key highlights include engineering the **Real-ESRGAN super-resolution pipeline** and delivering comprehensive evaluation reports, bringing up **FLUX.2-klein** on **Panther Lake** with BKMs, achieving a **2.8x speedup and 27% memory reduction** for **PaddleOCR-VL 1.5** via NNCF INT8 quantization, and building an end-to-end **SAM3 + LaMa** object-removal pipeline with a Gradio demo. Alongside these four formally reviewed deliverables, the work also included rebuilding the **PP-OCRv6 medium OCR pipeline** with a GPU/NPU/CPU heterogeneous deployment and its own OpenVINO BKM.
 
 ## Project index
 
@@ -150,9 +147,3 @@ INT4 weight compression's main win is **memory** (roughly a 3.5x peak-RAM cut on
 | **AI Runtime Engineering & Deployment** | OpenVINO™ Runtime, execution backends, dynamic-shape handling, and execution profiling across Intel CPU and iGPU architectures | Built and refactored pipeline implementations for Real-ESRGAN (super-resolution) and an end-to-end SAM3 + LaMa object-removal workflow with interactive Gradio interfaces |
 | **Model Quantization & Optimization** | NNCF quantization methodologies, dynamic quantization parameters (`INT8_dq`), and weight compression techniques (`INT8_cw`) for vision-language models | Quantized PaddleOCR-VL 1.5, achieving a ~2.8x end-to-end acceleration and 27% memory footprint reduction while authoring dynamic-dataset benchmark reports |
 | **Intel Hardware Bring-up & Profiling** | Hardware bring-up procedures, memory peak profiling, and sub-model latency breakdown methodologies on Intel silicon platforms | Led the early deployment of FLUX.2-klein on Panther Lake (Core Ultra X7 368H + Intel® Arc™ B390 GPU) across OpenVINO 2026.x releases and authored the official BKM |
-
-## Manager feedback summary
-
-**On results & delivery:** Consistent growth and delivery — proactively resolved Super Resolution issues, refactored the solution with clarity, and presented it with confidence. The PaddleOCR-VL 1.5 benchmarking work across PyTorch and OpenVINO was thorough and well-structured, independently building a seven-scenario dataset, evaluating 12 images, and delivering a well-reasoned recommendation for Configuration B backed by solid analysis of speed, memory, and consistency. SAM3 + LaMa object removal and FLUX.2-klein on Panther Lake were both delivered with reproducible demos and benchmarks.
-
-**On behavior & professionalism:** Impressive maturity for an early-career intern — proactive, unprompted status updates and supporting materials; a collaborative, open attitude; quick response to feedback and willingness to rerun experiments when assumptions changed; and a consistently positive, constructive tone throughout the internship.
