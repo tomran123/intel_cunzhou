@@ -1,0 +1,7 @@
+Resolution,Component,Precision,Baseline RAM,After-Load RAM,Peak RAM (absolute),RAM After Load Delta,Peak RAM Delta,Trough After Release
+512x512,text_encoder,INT4,2.37GB,4.51GB,6.82GB,2.13GB,4.45GB,2.36GB
+512x512,transformer,INT4,2.37GB,4.24GB,6.16GB,1.87GB,3.78GB,2.37GB
+512x512,vae_decoder,FP16,2.37GB,2.43GB,2.52GB,0.06GB,0.15GB,2.39GB
+1024x1024,text_encoder,INT4,3.22GB,5.36GB,7.77GB,2.13GB,4.55GB,3.33GB
+1024x1024,transformer,INT4,3.22GB,5.21GB,7.13GB,1.99GB,3.91GB,3.22GB
+1024x1024,vae_decoder,FP16,3.22GB,2.86GB,4.77GB,-0.36GB,1.55GB,3.24GB

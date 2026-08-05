@@ -1,0 +1,57 @@
+00:39:25 [INFO] FLUX.2-klein OpenVINO benchmark matrix starting
+00:39:25 [INFO] Args: {'device': 'GPU', 'precisions': 'fp16', 'resolutions': '512x512', 'steps': 4, 'warmup_runs': 1, 'measure_runs': 1, 'max_sequence_length': 512, 'prompt': 'Astronaut on the moon', 'seed': 0, 'fp16_model_dir': './benchmark_outputs/models/flux2-klein-fp16', 'int4_model_dir': './benchmark_outputs/models/flux2-klein-int4', 'output_dir': 'notebooks/openvino/benchmark_outputs/smoke_matrix', 'cache_dir': './ov_model_cache', 'stabilize_seconds': 1.0, 'ram_interval_ms': 30.0, 'log_level': 'INFO'}
+00:39:28 [INFO] Environment: {
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.10.11",
+  "openvino_version": "2026.3.0-22433-0e931a6a878-releases/2026/3",
+  "optimum_intel_version": "2.1.0.dev0",
+  "cpu_name": "Intel(R) Core(TM) Ultra X7 368H",
+  "gpu_name": "Intel(R) Arc(TM) B390 GPU (iGPU)",
+  "gpu_driver_version": "32.0.101.8860",
+  "total_memory_bytes": 68247695360,
+  "total_memory_gb": 63.6,
+  "device": "GPU",
+  "selected_device_name": "Intel(R) Arc(TM) B390 GPU (iGPU)",
+  "available_devices": [
+    "CPU",
+    "GPU",
+    "NPU"
+  ],
+  "collected_at": "2026-07-16T00:39:28"
+}
+00:39:28 [INFO] ==============================================================================
+00:39:28 [INFO] Configuration: fp16_512x512_4steps_no_cfg | model_dir=benchmark_outputs\models\flux2-klein-fp16
+00:39:28 [INFO] ==============================================================================
+00:39:28 [INFO] [warmup 1/1] starting
+00:39:39 [INFO] [warmup 1/1][INIT]    pipeline_init     1.278s
+00:39:54 [INFO] [LOAD]    text_encoder    15.301s
+00:39:55 [INFO] [warmup 1/1][INFER]   text_encoder      0.633s  embeds=(1, 512, 7680)
+00:39:55 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+00:40:11 [INFO] [LOAD]    transformer     15.446s
+00:40:13 [INFO] [warmup 1/1][INFER]   transformer       2.285s
+00:40:13 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+00:40:14 [INFO] [LOAD]    vae_decoder      0.495s
+00:40:15 [INFO] [warmup 1/1][INFER]   vae_decoder       0.711s
+00:40:15 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+00:40:15 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+00:40:15 [INFO] [measure 1/1] starting
+00:40:16 [INFO] [measure 1/1][INIT]    pipeline_init     0.984s
+00:40:19 [INFO] [LOAD]    text_encoder     3.214s
+00:40:21 [INFO] [measure 1/1][INFER]   text_encoder      1.586s  embeds=(1, 512, 7680)
+00:40:22 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+00:40:25 [INFO] [LOAD]    transformer      2.940s
+00:40:29 [INFO] [measure 1/1][INFER]   transformer       3.274s
+00:40:30 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+00:40:30 [INFO] [LOAD]    vae_decoder      0.113s
+00:40:30 [INFO] [measure 1/1][INFER]   vae_decoder       0.276s
+00:40:31 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+00:40:31 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+00:40:31 [INFO] Saved image: notebooks\openvino\benchmark_outputs\smoke_matrix\images\flux2_klein_fp16_512x512_4steps_no_cfg.png (size=(512, 512))
+00:40:31 [INFO] Exported results to notebooks\openvino\benchmark_outputs\smoke_matrix\results
+00:40:31 [INFO] 
+Resolution        | Model                  | Load Time | Infer Time | RAM After Load | Peak RAM
+------------------+------------------------+-----------+------------+----------------+---------
+512x512<br>4steps | Text Encoder-FP16      | 3.214s    | 1.586s     | 7.51GB         | 15.32GB 
+                  | Transformer-FP16       | 2.940s    | 3.274s     | 6.03GB         | 13.39GB 
+                  | Small VAE Decoder-FP16 | 0.113s    | 0.276s     | -1.03GB        | -0.48GB 
+00:40:31 [INFO] Benchmark matrix finished

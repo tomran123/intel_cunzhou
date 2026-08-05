@@ -1,0 +1,12 @@
+01:44:04 [INFO] FLUX.2-klein OpenVINO benchmark matrix starting
+01:44:04 [INFO] Args: {'device': 'GPU', 'precisions': 'int4', 'resolutions': '512x512,1024x1024', 'steps': 4, 'warmup_runs': 3, 'measure_runs': 5, 'max_sequence_length': 512, 'prompt': 'Astronaut on the moon', 'seed': 0, 'fp16_model_dir': './benchmark_outputs/models/flux2-klein-fp16', 'int4_model_dir': './benchmark_outputs/models/flux2-klein-int4', 'output_dir': '.\\benchmark_outputs_ov_matrix', 'cache_dir': './ov_model_cache', 'stabilize_seconds': 1.0, 'ram_interval_ms': 30.0, 'log_level': 'INFO', 'ov_versions': '26.1,26.2,26.3', 'run_single_ov_version': '', 'skip_ov_install': False}
+01:44:04 [INFO] ==============================================================================
+01:44:04 [INFO] OV version matrix cell: 26.1
+01:44:04 [INFO] ==============================================================================
+01:44:04 [INFO] Installing OpenVINO for OV 26.1 using stable spec: C:\Users\Local_Admin\Desktop\optimum-intel\.venv\Scripts\python.exe -m pip install --upgrade openvino==2026.1.*
+01:44:07 [INFO] Running benchmark for OV 26.1
+01:47:57 [INFO] ==============================================================================
+01:47:57 [INFO] OV version matrix cell: 26.2
+01:47:57 [INFO] ==============================================================================
+01:47:57 [INFO] Installing OpenVINO for OV 26.2 using stable spec: C:\Users\Local_Admin\Desktop\optimum-intel\.venv\Scripts\python.exe -m pip install --upgrade openvino==2026.2.*
+01:48:04 [INFO] Running benchmark for OV 26.2

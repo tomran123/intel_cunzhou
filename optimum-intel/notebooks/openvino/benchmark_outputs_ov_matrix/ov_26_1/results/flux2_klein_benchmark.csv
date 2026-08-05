@@ -1,0 +1,7 @@
+Resolution,Model,Load Time,Infer Time,RAM After Load,Peak RAM
+512x512,Text Encoder-INT4,3.107s,0.232s,3.87GB,6.02GB
+512x512,Transformer-INT4,2.690s,1.495s,3.64GB,5.63GB
+512x512,Small VAE Decoder-FP16,0.118s,0.228s,-0.19GB,0.08GB
+1024x1024,Text Encoder-INT4,3.120s,0.247s,3.99GB,6.15GB
+1024x1024,Transformer-INT4,2.589s,5.993s,3.92GB,5.98GB
+1024x1024,Small VAE Decoder-FP16,0.119s,1.350s,0.11GB,1.63GB

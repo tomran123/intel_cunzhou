@@ -1,0 +1,4 @@
+Resolution,Component,Precision,Baseline RAM,After-Load RAM,Peak RAM (absolute),RAM After Load Delta,Peak RAM Delta,Trough After Release
+512x512,text_encoder,FP16,2.46GB,9.96GB,17.77GB,7.51GB,15.32GB,2.67GB
+512x512,transformer,FP16,2.46GB,8.48GB,15.84GB,6.03GB,13.39GB,2.46GB
+512x512,vae_decoder,FP16,2.46GB,1.42GB,1.98GB,-1.03GB,-0.48GB,1.76GB

@@ -1,0 +1,441 @@
+01:07:56 [INFO] FLUX.2-klein OpenVINO benchmark matrix starting
+01:07:56 [INFO] Args: {'device': 'GPU', 'precisions': 'fp16,int4', 'resolutions': '512x512,1024x1024', 'steps': 4, 'warmup_runs': 3, 'measure_runs': 5, 'max_sequence_length': 512, 'prompt': 'Astronaut on the moon', 'seed': 0, 'fp16_model_dir': './benchmark_outputs/models/flux2-klein-fp16', 'int4_model_dir': './benchmark_outputs/models/flux2-klein-int4', 'output_dir': 'notebooks/openvino/benchmark_outputs/full_matrix_2026_2', 'cache_dir': './ov_model_cache', 'stabilize_seconds': 1.0, 'ram_interval_ms': 30.0, 'log_level': 'INFO'}
+01:07:58 [INFO] Environment: {
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.10.11",
+  "openvino_version": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+  "optimum_intel_version": "2.1.0.dev0",
+  "cpu_name": "Intel(R) Core(TM) Ultra X7 368H",
+  "gpu_name": "Intel(R) Arc(TM) B390 GPU (iGPU)",
+  "gpu_driver_version": "32.0.101.8860",
+  "total_memory_bytes": 68247695360,
+  "total_memory_gb": 63.6,
+  "device": "GPU",
+  "selected_device_name": "Intel(R) Arc(TM) B390 GPU (iGPU)",
+  "available_devices": [
+    "CPU",
+    "GPU",
+    "NPU"
+  ],
+  "collected_at": "2026-07-16T01:07:58"
+}
+01:07:58 [INFO] ==============================================================================
+01:07:58 [INFO] Configuration: fp16_512x512_4steps_no_cfg | model_dir=benchmark_outputs\models\flux2-klein-fp16
+01:07:58 [INFO] ==============================================================================
+01:07:58 [INFO] [warmup 1/3] starting
+01:08:03 [INFO] [warmup 1/3][INIT]    pipeline_init     1.129s
+01:08:12 [INFO] [LOAD]    text_encoder     8.524s
+01:08:12 [INFO] [warmup 1/3][INFER]   text_encoder      0.696s  embeds=(1, 512, 7680)
+01:08:13 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:08:22 [INFO] [LOAD]    transformer      8.505s
+01:08:25 [INFO] [warmup 1/3][INFER]   transformer       2.565s
+01:08:26 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:08:26 [INFO] [LOAD]    vae_decoder      0.183s
+01:08:26 [INFO] [warmup 1/3][INFER]   vae_decoder       0.642s
+01:08:27 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:08:27 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:08:27 [INFO] [warmup 2/3] starting
+01:08:28 [INFO] [warmup 2/3][INIT]    pipeline_init     0.942s
+01:08:33 [INFO] [LOAD]    text_encoder     4.873s
+01:08:33 [INFO] [warmup 2/3][INFER]   text_encoder      0.310s  embeds=(1, 512, 7680)
+01:08:34 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:08:38 [INFO] [LOAD]    transformer      4.111s
+01:08:40 [INFO] [warmup 2/3][INFER]   transformer       2.151s
+01:08:42 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:08:42 [INFO] [LOAD]    vae_decoder      0.098s
+01:08:42 [INFO] [warmup 2/3][INFER]   vae_decoder       0.235s
+01:08:42 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:08:42 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:08:42 [INFO] [warmup 3/3] starting
+01:08:43 [INFO] [warmup 3/3][INIT]    pipeline_init     0.911s
+01:08:48 [INFO] [LOAD]    text_encoder     4.842s
+01:08:48 [INFO] [warmup 3/3][INFER]   text_encoder      0.290s  embeds=(1, 512, 7680)
+01:08:49 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:08:54 [INFO] [LOAD]    transformer      4.142s
+01:08:56 [INFO] [warmup 3/3][INFER]   transformer       2.090s
+01:08:57 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:08:57 [INFO] [LOAD]    vae_decoder      0.091s
+01:08:57 [INFO] [warmup 3/3][INFER]   vae_decoder       0.231s
+01:08:57 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:08:57 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:08:57 [INFO] [measure 1/5] starting
+01:08:58 [INFO] [measure 1/5][INIT]    pipeline_init     0.892s
+01:09:03 [INFO] [LOAD]    text_encoder     4.707s
+01:09:03 [INFO] [measure 1/5][INFER]   text_encoder      0.284s  embeds=(1, 512, 7680)
+01:09:05 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:09:09 [INFO] [LOAD]    transformer      4.121s
+01:09:11 [INFO] [measure 1/5][INFER]   transformer       2.232s
+01:09:12 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:09:12 [INFO] [LOAD]    vae_decoder      0.094s
+01:09:12 [INFO] [measure 1/5][INFER]   vae_decoder       0.262s
+01:09:13 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:09:13 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:09:13 [INFO] [measure 2/5] starting
+01:09:14 [INFO] [measure 2/5][INIT]    pipeline_init     0.929s
+01:09:19 [INFO] [LOAD]    text_encoder     4.845s
+01:09:19 [INFO] [measure 2/5][INFER]   text_encoder      0.314s  embeds=(1, 512, 7680)
+01:09:20 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:09:24 [INFO] [LOAD]    transformer      4.068s
+01:09:26 [INFO] [measure 2/5][INFER]   transformer       2.161s
+01:09:27 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:09:28 [INFO] [LOAD]    vae_decoder      0.096s
+01:09:28 [INFO] [measure 2/5][INFER]   vae_decoder       0.228s
+01:09:28 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:09:28 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:09:28 [INFO] [measure 3/5] starting
+01:09:29 [INFO] [measure 3/5][INIT]    pipeline_init     0.910s
+01:09:34 [INFO] [LOAD]    text_encoder     4.816s
+01:09:34 [INFO] [measure 3/5][INFER]   text_encoder      0.296s  embeds=(1, 512, 7680)
+01:09:35 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:09:40 [INFO] [LOAD]    transformer      4.202s
+01:09:42 [INFO] [measure 3/5][INFER]   transformer       2.421s
+01:09:43 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:09:43 [INFO] [LOAD]    vae_decoder      0.095s
+01:09:44 [INFO] [measure 3/5][INFER]   vae_decoder       0.253s
+01:09:44 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:09:44 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:09:44 [INFO] [measure 4/5] starting
+01:09:45 [INFO] [measure 4/5][INIT]    pipeline_init     0.931s
+01:09:50 [INFO] [LOAD]    text_encoder     4.772s
+01:09:50 [INFO] [measure 4/5][INFER]   text_encoder      0.291s  embeds=(1, 512, 7680)
+01:09:51 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:09:56 [INFO] [LOAD]    transformer      4.345s
+01:09:58 [INFO] [measure 4/5][INFER]   transformer       2.592s
+01:09:59 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:09:59 [INFO] [LOAD]    vae_decoder      0.096s
+01:10:00 [INFO] [measure 4/5][INFER]   vae_decoder       0.238s
+01:10:00 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:00 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:00 [INFO] [measure 5/5] starting
+01:10:01 [INFO] [measure 5/5][INIT]    pipeline_init     0.921s
+01:10:06 [INFO] [LOAD]    text_encoder     4.604s
+01:10:06 [INFO] [measure 5/5][INFER]   text_encoder      0.284s  embeds=(1, 512, 7680)
+01:10:07 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:11 [INFO] [LOAD]    transformer      4.062s
+01:10:13 [INFO] [measure 5/5][INFER]   transformer       2.168s
+01:10:14 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:14 [INFO] [LOAD]    vae_decoder      0.093s
+01:10:15 [INFO] [measure 5/5][INFER]   vae_decoder       0.225s
+01:10:15 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:15 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:15 [INFO] Saved image: notebooks\openvino\benchmark_outputs\full_matrix_2026_2\images\flux2_klein_fp16_512x512_4steps_no_cfg.png (size=(512, 512))
+01:10:15 [INFO] Exported results to notebooks\openvino\benchmark_outputs\full_matrix_2026_2\results
+01:10:15 [INFO] ==============================================================================
+01:10:15 [INFO] Configuration: int4_512x512_4steps_no_cfg | model_dir=benchmark_outputs\models\flux2-klein-int4
+01:10:15 [INFO] ==============================================================================
+01:10:15 [INFO] [warmup 1/3] starting
+01:10:16 [INFO] [warmup 1/3][INIT]    pipeline_init     0.985s
+01:10:21 [INFO] [LOAD]    text_encoder     4.576s
+01:10:21 [INFO] [warmup 1/3][INFER]   text_encoder      0.455s  embeds=(1, 512, 7680)
+01:10:22 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:25 [INFO] [LOAD]    transformer      3.280s
+01:10:27 [INFO] [warmup 1/3][INFER]   transformer       1.954s
+01:10:27 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:28 [INFO] [LOAD]    vae_decoder      0.615s
+01:10:28 [INFO] [warmup 1/3][INFER]   vae_decoder       0.439s
+01:10:28 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:29 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:29 [INFO] [warmup 2/3] starting
+01:10:30 [INFO] [warmup 2/3][INIT]    pipeline_init     0.975s
+01:10:32 [INFO] [LOAD]    text_encoder     2.501s
+01:10:32 [INFO] [warmup 2/3][INFER]   text_encoder      0.224s  embeds=(1, 512, 7680)
+01:10:33 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:34 [INFO] [LOAD]    transformer      1.276s
+01:10:36 [INFO] [warmup 2/3][INFER]   transformer       1.531s
+01:10:36 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:36 [INFO] [LOAD]    vae_decoder      0.205s
+01:10:36 [INFO] [warmup 2/3][INFER]   vae_decoder       0.127s
+01:10:36 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:37 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:37 [INFO] [warmup 3/3] starting
+01:10:38 [INFO] [warmup 3/3][INIT]    pipeline_init     0.977s
+01:10:39 [INFO] [LOAD]    text_encoder     1.500s
+01:10:39 [INFO] [warmup 3/3][INFER]   text_encoder      0.207s  embeds=(1, 512, 7680)
+01:10:40 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:41 [INFO] [LOAD]    transformer      1.237s
+01:10:42 [INFO] [warmup 3/3][INFER]   transformer       1.408s
+01:10:43 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:43 [INFO] [LOAD]    vae_decoder      0.072s
+01:10:43 [INFO] [warmup 3/3][INFER]   vae_decoder       0.125s
+01:10:43 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:43 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:43 [INFO] [measure 1/5] starting
+01:10:44 [INFO] [measure 1/5][INIT]    pipeline_init     0.949s
+01:10:46 [INFO] [LOAD]    text_encoder     1.510s
+01:10:46 [INFO] [measure 1/5][INFER]   text_encoder      0.207s  embeds=(1, 512, 7680)
+01:10:47 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:48 [INFO] [LOAD]    transformer      1.238s
+01:10:49 [INFO] [measure 1/5][INFER]   transformer       1.447s
+01:10:50 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:50 [INFO] [LOAD]    vae_decoder      0.077s
+01:10:50 [INFO] [measure 1/5][INFER]   vae_decoder       0.122s
+01:10:50 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:50 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:50 [INFO] [measure 2/5] starting
+01:10:51 [INFO] [measure 2/5][INIT]    pipeline_init     0.943s
+01:10:53 [INFO] [LOAD]    text_encoder     1.505s
+01:10:53 [INFO] [measure 2/5][INFER]   text_encoder      0.206s  embeds=(1, 512, 7680)
+01:10:53 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:10:55 [INFO] [LOAD]    transformer      1.259s
+01:10:56 [INFO] [measure 2/5][INFER]   transformer       1.406s
+01:10:56 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:10:56 [INFO] [LOAD]    vae_decoder      0.069s
+01:10:57 [INFO] [measure 2/5][INFER]   vae_decoder       0.124s
+01:10:57 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:10:57 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:10:57 [INFO] [measure 3/5] starting
+01:10:58 [INFO] [measure 3/5][INIT]    pipeline_init     0.959s
+01:10:59 [INFO] [LOAD]    text_encoder     1.579s
+01:11:00 [INFO] [measure 3/5][INFER]   text_encoder      0.212s  embeds=(1, 512, 7680)
+01:11:00 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:11:01 [INFO] [LOAD]    transformer      1.319s
+01:11:03 [INFO] [measure 3/5][INFER]   transformer       1.416s
+01:11:03 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:11:03 [INFO] [LOAD]    vae_decoder      0.072s
+01:11:03 [INFO] [measure 3/5][INFER]   vae_decoder       0.127s
+01:11:04 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:11:04 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:11:04 [INFO] [measure 4/5] starting
+01:11:05 [INFO] [measure 4/5][INIT]    pipeline_init     0.969s
+01:11:06 [INFO] [LOAD]    text_encoder     1.612s
+01:11:07 [INFO] [measure 4/5][INFER]   text_encoder      0.221s  embeds=(1, 512, 7680)
+01:11:07 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:11:08 [INFO] [LOAD]    transformer      1.354s
+01:11:10 [INFO] [measure 4/5][INFER]   transformer       1.441s
+01:11:10 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:11:10 [INFO] [LOAD]    vae_decoder      0.074s
+01:11:10 [INFO] [measure 4/5][INFER]   vae_decoder       0.126s
+01:11:11 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:11:11 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:11:11 [INFO] [measure 5/5] starting
+01:11:12 [INFO] [measure 5/5][INIT]    pipeline_init     0.953s
+01:11:13 [INFO] [LOAD]    text_encoder     1.552s
+01:11:14 [INFO] [measure 5/5][INFER]   text_encoder      0.205s  embeds=(1, 512, 7680)
+01:11:14 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:11:15 [INFO] [LOAD]    transformer      1.295s
+01:11:17 [INFO] [measure 5/5][INFER]   transformer       1.467s
+01:11:17 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:11:17 [INFO] [LOAD]    vae_decoder      0.076s
+01:11:17 [INFO] [measure 5/5][INFER]   vae_decoder       0.125s
+01:11:18 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:11:18 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:11:18 [INFO] Saved image: notebooks\openvino\benchmark_outputs\full_matrix_2026_2\images\flux2_klein_int4_512x512_4steps_no_cfg.png (size=(512, 512))
+01:11:18 [INFO] Exported results to notebooks\openvino\benchmark_outputs\full_matrix_2026_2\results
+01:11:18 [INFO] ==============================================================================
+01:11:18 [INFO] Configuration: fp16_1024x1024_4steps_no_cfg | model_dir=benchmark_outputs\models\flux2-klein-fp16
+01:11:18 [INFO] ==============================================================================
+01:11:18 [INFO] [warmup 1/3] starting
+01:11:19 [INFO] [warmup 1/3][INIT]    pipeline_init     0.920s
+01:11:24 [INFO] [LOAD]    text_encoder     5.487s
+01:11:24 [INFO] [warmup 1/3][INFER]   text_encoder      0.271s  embeds=(1, 512, 7680)
+01:11:25 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:11:32 [INFO] [LOAD]    transformer      6.612s
+01:11:46 [INFO] [warmup 1/3][INFER]   transformer      13.916s
+01:11:47 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:11:47 [INFO] [LOAD]    vae_decoder      0.138s
+01:11:48 [INFO] [warmup 1/3][INFER]   vae_decoder       1.034s
+01:11:48 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:11:48 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:11:48 [INFO] [warmup 2/3] starting
+01:11:49 [INFO] [warmup 2/3][INIT]    pipeline_init     0.920s
+01:11:54 [INFO] [LOAD]    text_encoder     4.811s
+01:11:54 [INFO] [warmup 2/3][INFER]   text_encoder      0.289s  embeds=(1, 512, 7680)
+01:11:55 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:12:00 [INFO] [LOAD]    transformer      4.149s
+01:12:10 [INFO] [warmup 2/3][INFER]   transformer      10.618s
+01:12:11 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:12:11 [INFO] [LOAD]    vae_decoder      0.102s
+01:12:12 [INFO] [warmup 2/3][INFER]   vae_decoder       0.880s
+01:12:13 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:12:13 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:12:13 [INFO] [warmup 3/3] starting
+01:12:14 [INFO] [warmup 3/3][INIT]    pipeline_init     0.878s
+01:12:18 [INFO] [LOAD]    text_encoder     4.464s
+01:12:18 [INFO] [warmup 3/3][INFER]   text_encoder      0.300s  embeds=(1, 512, 7680)
+01:12:20 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:12:24 [INFO] [LOAD]    transformer      3.984s
+01:12:31 [INFO] [warmup 3/3][INFER]   transformer       7.361s
+01:12:32 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:12:32 [INFO] [LOAD]    vae_decoder      0.096s
+01:12:33 [INFO] [warmup 3/3][INFER]   vae_decoder       0.884s
+01:12:33 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:12:33 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:12:33 [INFO] [measure 1/5] starting
+01:12:34 [INFO] [measure 1/5][INIT]    pipeline_init     0.883s
+01:12:39 [INFO] [LOAD]    text_encoder     4.415s
+01:12:39 [INFO] [measure 1/5][INFER]   text_encoder      0.285s  embeds=(1, 512, 7680)
+01:12:40 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:12:44 [INFO] [LOAD]    transformer      3.970s
+01:12:52 [INFO] [measure 1/5][INFER]   transformer       8.253s
+01:12:53 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:12:54 [INFO] [LOAD]    vae_decoder      0.094s
+01:12:54 [INFO] [measure 1/5][INFER]   vae_decoder       0.955s
+01:12:55 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:12:55 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:12:55 [INFO] [measure 2/5] starting
+01:12:56 [INFO] [measure 2/5][INIT]    pipeline_init     0.878s
+01:13:00 [INFO] [LOAD]    text_encoder     4.327s
+01:13:00 [INFO] [measure 2/5][INFER]   text_encoder      0.321s  embeds=(1, 512, 7680)
+01:13:02 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:13:06 [INFO] [LOAD]    transformer      3.963s
+01:13:12 [INFO] [measure 2/5][INFER]   transformer       6.479s
+01:13:13 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:13:13 [INFO] [LOAD]    vae_decoder      0.099s
+01:13:14 [INFO] [measure 2/5][INFER]   vae_decoder       0.866s
+01:13:14 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:13:14 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:13:15 [INFO] [measure 3/5] starting
+01:13:15 [INFO] [measure 3/5][INIT]    pipeline_init     0.918s
+01:13:20 [INFO] [LOAD]    text_encoder     4.329s
+01:13:20 [INFO] [measure 3/5][INFER]   text_encoder      0.263s  embeds=(1, 512, 7680)
+01:13:21 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:13:25 [INFO] [LOAD]    transformer      3.963s
+01:13:31 [INFO] [measure 3/5][INFER]   transformer       6.184s
+01:13:32 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:13:33 [INFO] [LOAD]    vae_decoder      0.109s
+01:13:33 [INFO] [measure 3/5][INFER]   vae_decoder       0.834s
+01:13:34 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:13:34 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:13:34 [INFO] [measure 4/5] starting
+01:13:35 [INFO] [measure 4/5][INIT]    pipeline_init     0.883s
+01:13:39 [INFO] [LOAD]    text_encoder     4.319s
+01:13:39 [INFO] [measure 4/5][INFER]   text_encoder      0.269s  embeds=(1, 512, 7680)
+01:13:40 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:13:44 [INFO] [LOAD]    transformer      3.990s
+01:13:51 [INFO] [measure 4/5][INFER]   transformer       6.257s
+01:13:52 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:13:52 [INFO] [LOAD]    vae_decoder      0.097s
+01:13:53 [INFO] [measure 4/5][INFER]   vae_decoder       0.838s
+01:13:53 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:13:53 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:13:53 [INFO] [measure 5/5] starting
+01:13:54 [INFO] [measure 5/5][INIT]    pipeline_init     0.883s
+01:13:58 [INFO] [LOAD]    text_encoder     4.334s
+01:13:59 [INFO] [measure 5/5][INFER]   text_encoder      0.266s  embeds=(1, 512, 7680)
+01:14:00 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:14:04 [INFO] [LOAD]    transformer      3.974s
+01:14:10 [INFO] [measure 5/5][INFER]   transformer       6.198s
+01:14:11 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:14:11 [INFO] [LOAD]    vae_decoder      0.095s
+01:14:12 [INFO] [measure 5/5][INFER]   vae_decoder       0.876s
+01:14:12 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:14:12 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:14:13 [INFO] Saved image: notebooks\openvino\benchmark_outputs\full_matrix_2026_2\images\flux2_klein_fp16_1024x1024_4steps_no_cfg.png (size=(1024, 1024))
+01:14:13 [INFO] Exported results to notebooks\openvino\benchmark_outputs\full_matrix_2026_2\results
+01:14:13 [INFO] ==============================================================================
+01:14:13 [INFO] Configuration: int4_1024x1024_4steps_no_cfg | model_dir=benchmark_outputs\models\flux2-klein-int4
+01:14:13 [INFO] ==============================================================================
+01:14:13 [INFO] [warmup 1/3] starting
+01:14:14 [INFO] [warmup 1/3][INIT]    pipeline_init     0.947s
+01:14:16 [INFO] [LOAD]    text_encoder     2.004s
+01:14:16 [INFO] [warmup 1/3][INFER]   text_encoder      0.207s  embeds=(1, 512, 7680)
+01:14:16 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:14:17 [INFO] [LOAD]    transformer      1.253s
+01:14:23 [INFO] [warmup 1/3][INFER]   transformer       5.178s
+01:14:23 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:14:23 [INFO] [LOAD]    vae_decoder      0.074s
+01:14:24 [INFO] [warmup 1/3][INFER]   vae_decoder       0.882s
+01:14:24 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:14:24 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:14:24 [INFO] [warmup 2/3] starting
+01:14:25 [INFO] [warmup 2/3][INIT]    pipeline_init     0.961s
+01:14:27 [INFO] [LOAD]    text_encoder     1.485s
+01:14:27 [INFO] [warmup 2/3][INFER]   text_encoder      0.217s  embeds=(1, 512, 7680)
+01:14:28 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:14:29 [INFO] [LOAD]    transformer      1.269s
+01:14:34 [INFO] [warmup 2/3][INFER]   transformer       5.157s
+01:14:34 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:14:34 [INFO] [LOAD]    vae_decoder      0.079s
+01:14:35 [INFO] [warmup 2/3][INFER]   vae_decoder       0.824s
+01:14:36 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:14:36 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:14:36 [INFO] [warmup 3/3] starting
+01:14:37 [INFO] [warmup 3/3][INIT]    pipeline_init     0.954s
+01:14:38 [INFO] [LOAD]    text_encoder     1.484s
+01:14:38 [INFO] [warmup 3/3][INFER]   text_encoder      0.206s  embeds=(1, 512, 7680)
+01:14:39 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:14:40 [INFO] [LOAD]    transformer      1.275s
+01:14:46 [INFO] [warmup 3/3][INFER]   transformer       5.467s
+01:14:46 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:14:46 [INFO] [LOAD]    vae_decoder      0.072s
+01:14:47 [INFO] [warmup 3/3][INFER]   vae_decoder       0.825s
+01:14:47 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:14:47 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:14:47 [INFO] [measure 1/5] starting
+01:14:48 [INFO] [measure 1/5][INIT]    pipeline_init     0.949s
+01:14:50 [INFO] [LOAD]    text_encoder     1.471s
+01:14:50 [INFO] [measure 1/5][INFER]   text_encoder      0.208s  embeds=(1, 512, 7680)
+01:14:50 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:14:52 [INFO] [LOAD]    transformer      1.266s
+01:14:57 [INFO] [measure 1/5][INFER]   transformer       5.408s
+01:14:57 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:14:57 [INFO] [LOAD]    vae_decoder      0.070s
+01:14:58 [INFO] [measure 1/5][INFER]   vae_decoder       0.820s
+01:14:59 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:14:59 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:14:59 [INFO] [measure 2/5] starting
+01:15:00 [INFO] [measure 2/5][INIT]    pipeline_init     0.945s
+01:15:01 [INFO] [LOAD]    text_encoder     1.495s
+01:15:01 [INFO] [measure 2/5][INFER]   text_encoder      0.208s  embeds=(1, 512, 7680)
+01:15:02 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:15:03 [INFO] [LOAD]    transformer      1.263s
+01:15:09 [INFO] [measure 2/5][INFER]   transformer       5.457s
+01:15:09 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:15:09 [INFO] [LOAD]    vae_decoder      0.072s
+01:15:10 [INFO] [measure 2/5][INFER]   vae_decoder       0.817s
+01:15:10 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:15:10 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:15:10 [INFO] [measure 3/5] starting
+01:15:11 [INFO] [measure 3/5][INIT]    pipeline_init     0.963s
+01:15:13 [INFO] [LOAD]    text_encoder     1.469s
+01:15:13 [INFO] [measure 3/5][INFER]   text_encoder      0.227s  embeds=(1, 512, 7680)
+01:15:13 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:15:15 [INFO] [LOAD]    transformer      1.266s
+01:15:20 [INFO] [measure 3/5][INFER]   transformer       5.414s
+01:15:20 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:15:21 [INFO] [LOAD]    vae_decoder      0.072s
+01:15:21 [INFO] [measure 3/5][INFER]   vae_decoder       0.815s
+01:15:22 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:15:22 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:15:22 [INFO] [measure 4/5] starting
+01:15:23 [INFO] [measure 4/5][INIT]    pipeline_init     0.938s
+01:15:24 [INFO] [LOAD]    text_encoder     1.488s
+01:15:24 [INFO] [measure 4/5][INFER]   text_encoder      0.207s  embeds=(1, 512, 7680)
+01:15:25 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:15:26 [INFO] [LOAD]    transformer      1.286s
+01:15:32 [INFO] [measure 4/5][INFER]   transformer       5.512s
+01:15:32 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:15:32 [INFO] [LOAD]    vae_decoder      0.075s
+01:15:33 [INFO] [measure 4/5][INFER]   vae_decoder       0.830s
+01:15:33 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:15:33 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:15:33 [INFO] [measure 5/5] starting
+01:15:34 [INFO] [measure 5/5][INIT]    pipeline_init     0.943s
+01:15:36 [INFO] [LOAD]    text_encoder     1.493s
+01:15:36 [INFO] [measure 5/5][INFER]   text_encoder      0.211s  embeds=(1, 512, 7680)
+01:15:36 [INFO] [RELEASE] text_encoder  (GPU + host RAM freed)
+01:15:38 [INFO] [LOAD]    transformer      1.266s
+01:15:43 [INFO] [measure 5/5][INFER]   transformer       5.427s
+01:15:44 [INFO] [RELEASE] transformer   (GPU + host RAM freed)
+01:15:44 [INFO] [LOAD]    vae_decoder      0.070s
+01:15:44 [INFO] [measure 5/5][INFER]   vae_decoder       0.810s
+01:15:45 [INFO] [RELEASE] vae_decoder   (GPU + host RAM freed)
+01:15:45 [INFO] [RELEASE] vae_encoder   (GPU + host RAM freed)
+01:15:45 [INFO] Saved image: notebooks\openvino\benchmark_outputs\full_matrix_2026_2\images\flux2_klein_int4_1024x1024_4steps_no_cfg.png (size=(1024, 1024))
+01:15:45 [INFO] Exported results to notebooks\openvino\benchmark_outputs\full_matrix_2026_2\results
+01:15:45 [INFO] 
+Resolution          | Model                  | Load Time | Infer Time | RAM After Load | Peak RAM
+--------------------+------------------------+-----------+------------+----------------+---------
+512x512<br>4steps   | Text Encoder-FP16      | 4.749s    | 0.294s     | 14.53GB        | 14.86GB 
+                    | Transformer-FP16       | 4.160s    | 2.315s     | 13.49GB        | 13.61GB 
+                    | Small VAE Decoder-FP16 | 0.095s    | 0.241s     | -0.30GB        | 0.11GB  
+512x512<br>4steps   | Text Encoder-INT4      | 1.552s    | 0.210s     | 3.66GB         | 3.98GB  
+                    | Transformer-INT4       | 1.293s    | 1.436s     | 3.58GB         | 3.61GB  
+                    | Small VAE Decoder-FP16 | 0.074s    | 0.125s     | 0.11GB         | 0.14GB  
+1024x1024<br>4steps | Text Encoder-FP16      | 4.345s    | 0.281s     | 14.77GB        | 15.15GB 
+                    | Transformer-FP16       | 3.972s    | 6.674s     | 12.61GB        | 13.48GB 
+                    | Small VAE Decoder-FP16 | 0.099s    | 0.874s     | -0.49GB        | 1.49GB  
+1024x1024<br>4steps | Text Encoder-INT4      | 1.483s    | 0.212s     | 3.89GB         | 4.25GB  
+                    | Transformer-INT4       | 1.269s    | 5.443s     | 3.84GB         | 3.87GB  
+                    | Small VAE Decoder-FP16 | 0.072s    | 0.818s     | -0.34GB        | 1.55GB  
+01:15:45 [INFO] Benchmark matrix finished

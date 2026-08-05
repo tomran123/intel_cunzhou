@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+.env
+
+# OpenVINO model weights / compile caches (re-creatable, not source work)
+ov_model_cache/
+**/model_cache/
+*.blob
+
+# OS / editor
+.DS_Store
+Thumbs.db
